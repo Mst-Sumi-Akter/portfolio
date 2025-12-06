@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Portfolio Home Screen</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,typography,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+<link crossorigin="anonymous" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" referrerpolicy="no-referrer" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+<link crossorigin="anonymous" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" referrerpolicy="no-referrer" rel="stylesheet"/>
+
+<script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            primary: "#00bfff", // Deep Sky Blue for the neon effect
+            "background-light": "#f0f9ff", // A very light blue for light mode
+            "background-dark": "#081b29", // Dark navy from the screenshot
+          },
+          fontFamily: {
+            display: ["Poppins", "sans-serif"],
+          },
+          borderRadius: {
+            DEFAULT: "0.5rem", // 8px
+          },
+          boxShadow: {
+            'glow': '0 0 15px 5px rgba(0, 191, 255, 0.4), 0 0 30px 10px rgba(0, 191, 255, 0.2)',
+          }
+        },
+      },
+    };
+  </script>
+<style>
+    @keyframes typing-cursor {
+      from {
+        border-right-color: transparent;
+      }
+      to {
+        border-right-color: #00bfff;
+      }
+    }
+    .typing-cursor {
+      animation: typing-cursor 1s infinite step-end;
+    }
+  </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-gray-700 dark:text-gray-300">
+<div class="container mx-auto px-4 sm:px-6 lg:px-20 xl:px-24">
+<header class="flex justify-between items-center py-6">
+<a class="flex items-center space-x-3" href="#">
+<img alt="Sumi Akter profile picture" class="h-10 w-10 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDCLfIpjoyxotvyqUXjJa9xTn_mJGWJhn9E1jwqeo1VpN41J40BiUG-86zjA8Z1iA2HULULYDzd45Ekm7XIfEny7XKwAXJPDWfh9Lp3zxKZV-79cFAH-5BuGrP6w9p7uHXSXWb0VaYJT6PxbG6DM6D7ZbhovfCBGeguUGoEOnh3kcigKG-rJPB_qh6-aQWcfJgCeaGbBUz8_uAqZqJ-QFhnss5qhA7V4mfWDGIVCELtncmtSvETn9DThLIySmDXRhOJJG0k9U441EZx"/>
+<span class="text-xl font-bold text-gray-900 dark:text-white">Sumi Akter</span>
+</a>
+<nav class="hidden md:flex items-center space-x-8">
+<a class="text-primary font-medium hover:text-primary/80 transition-colors duration-300" href="#">Home</a>
+<a class="hover:text-primary transition-colors duration-300" href="#">About</a>
+<a class="hover:text-primary transition-colors duration-300" href="#">Services</a>
+<a class="hover:text-primary transition-colors duration-300" href="#">Skills</a>
+<a class="hover:text-primary transition-colors duration-300" href="#">Project</a>
+<a class="hover:text-primary transition-colors duration-300" href="#">Contact</a>
+<a class="hover:text-primary transition-colors duration-300" href="#">Resume</a>
+</nav>
+</header>
+<main class="flex flex-col lg:flex-row items-center justify-between py-12 lg:py-24">
+<div class="lg:w-1/2 text-center lg:text-left lg:pr-12">
+<p class="text-lg md:text-xl font-medium text-gray-800 dark:text-gray-100">Hello, It's Me</p>
+<h2 class="text-4xl md:text-6xl font-bold my-2 text-gray-900 dark:text-white">SUMI AKTER</h2>
+<h3 class="text-2xl md:text-3xl font-semibold text-gray-800 dark:text-gray-100">And I'm a <span class="text-primary inline-block">Web Developer<span class="inline-block border-r-4 border-primary typing-cursor w-1 h-8 ml-1 align-bottom"></span></span></h3>
+<p class="mt-4 text-sm md:text-base max-w-lg mx-auto lg:mx-0">
+          I'm a Web Designer with extensive experience for over 3 years. My expertise is to create and website design, Frontend design, and many more...
+        </p>
+<div class="flex justify-center lg:justify-start space-x-3 mt-6">
+<a class="w-10 h-10 flex items-center justify-center border-2 border-primary rounded-full text-primary hover:bg-primary hover:text-white dark:hover:text-background-dark transition-all duration-300" href="#">
+<svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"></path></svg>
+</a>
+<a class="w-10 h-10 flex items-center justify-center border-2 border-primary rounded-full text-primary hover:bg-primary hover:text-white dark:hover:text-background-dark transition-all duration-300" href="#">
+<svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4.98 3.5c0 1.381-1.11 2.5-2.48 2.5s-2.48-1.119-2.48-2.5c0-1.38 1.11-2.5 2.48-2.5s2.48 1.12 2.48 2.5zm.02 4.5h-5v16h5v-16zm7.982 0h-4.968v16h4.969v-8.399c0-4.67 6.029-5.052 6.029 0v8.399h4.988v-10.131c0-7.88-8.922-7.593-11.018-3.714v-2.155z"></path></svg>
+</a>
+<a class="w-10 h-10 flex items-center justify-center border-2 border-primary rounded-full text-primary hover:bg-primary hover:text-white dark:hover:text-background-dark transition-all duration-300" href="#">
+<svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"></path></svg>
+</a>
+<a class="w-10 h-10 flex items-center justify-center border-2 border-primary rounded-full text-primary hover:bg-primary hover:text-white dark:hover:text-background-dark transition-all duration-300" href="#">
+<svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M24 4h-24v16h24v-16zm-12 10.117l-10-6.117v-1.714l10 6.069 10-6.069v1.714l-10 6.117z"></path></svg>
+</a>
+</div>
+<div class="mt-8">
+<a class="inline-block bg-primary text-white dark:text-background-dark font-semibold px-8 py-3 rounded-lg shadow-lg shadow-primary/30 hover:bg-primary/90 hover:shadow-xl hover:shadow-primary/40 transition-all duration-300 transform hover:-translate-y-1" href="#">
+            More About Me
+          </a>
+</div>
+</div>
+<div class="lg:w-1/2 mt-12 lg:mt-0 flex justify-center lg:justify-end items-center">
+<div class="relative">
+<div class="absolute inset-0 rounded-full bg-gradient-to-tr from-purple-500 to-cyan-400 blur-3xl opacity-70"></div>
+<div class="relative w-72 h-72 sm:w-80 sm:h-80 md:w-96 md:h-96 rounded-full p-1 bg-gradient-to-tr from-purple-500 to-primary shadow-glow">
+<img alt="Portrait of a web developer" class="w-full h-full object-cover rounded-full" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDCLfIpjoyxotvyqUXjJa9xTn_mJGWJhn9E1jwqeo1VpN41J40BiUG-86zjA8Z1iA2HULULYDzd45Ekm7XIfEny7XKwAXJPDWfh9Lp3zxKZV-79cFAH-5BuGrP6w9p7uHXSXWb0VaYJT6PxbG6DM6D7ZbhovfCBGeguUGoEOnh3kcigKG-rJPB_qh6-aQWcfJgCeaGbBUz8_uAqZqJ-QFhnss5qhA7V4mfWDGIVCELtncmtSvETn9DThLIySmDXRhOJJG0k9U441EZx"/>
+</div>
+</div>
+</div>
+</main>
+<footer class="text-center py-4">
+</footer>
+</div>
+
+
+<section class="bg-background-light dark:bg-background-dark font-display">
+<div class="flex items-center justify-center min-h-screen">
+<div class="w-full max-w-6xl p-8 md:p-12">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-20 items-center">
+<div class="flex justify-center md:col-span-1">
+<div class="relative w-64 h-64 sm:w-80 sm:h-80">
+<div class="absolute inset-0 rounded-full glow-border"></div>
+<img alt="Portrait of a developer sitting on a bench outdoors." class="w-full h-full object-cover rounded-full p-2" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBc63jBRspiFrA2v-mvT6f0ZBBMjDWCRC7iautWLcnJ3bfEiM7e1Ov2i9bLK6TAmB4drwhibLrM2fY1d6UJocR04E52fPP5aajSzbAZPOdrlJhfGdw8GSaFVwTN-Nnttr-Pf1s89ugCRygKQfAj6pMnMGvTfnmC4cP8Cbyhjc4v81IjCCoFtf9SPAi-lNeML10NtehyMklzpRYKKpubn_GPJUMaTV3REEKYAB16F2StLEG_oVPlEkePLZng9xFKZg-sbX6Dzwbt66Yw"/>
+</div>
+</div>
+<div class="md:col-span-2 text-center md:text-left flex flex-col h-full">
+<h1 class="text-4xl sm:text-5xl font-bold text-slate-800 dark:text-white">
+            About <span class="text-primary">Me</span>
+</h1>
+<h2 class="mt-2 text-xl sm:text-2xl font-semibold text-slate-600 dark:text-slate-300">
+            Full Stack Developer!
+          </h2>
+<p class="mt-6 text-slate-600 dark:text-slate-400 leading-relaxed text-justify">
+            I am a skilled web designer with over 3 years of experience in the industry. My passion lies in creating captivating website designs and implementing them through frontend development. I take pride in staying up-to-date with current design trends and leveraging my creativity to produce visually appealing and user-friendly websites. Throughout my career, I have developed a deep understanding of user experience (UX) and user interface (UI) principles. By putting myself in the shoes of the end-users, I strive to create intuitive and seamless browsing experiences. I believe that a well-designed website should not only look visually appealing but also provide a smooth and enjoyable interaction for visitors. When starting a new project, I thoroughly research and analyze the target audience and the client's specific requirements. This enables me to tailor my designs to meet their expectations and deliver a unique online presence that aligns with their brand identity.
+          </p>
+<div class="mt-auto pt-8">
+<a class="inline-block bg-primary text-slate-900 font-bold py-3 px-8 rounded-full transition-transform duration-300 hover:scale-105 glow-button" href="#">
+              More About Me
+            </a>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</section>
+
+
+<section class="font-display bg-background-light dark:bg-background-dark min-h-screen flex items-center justify-center p-4">
+<div class="w-full max-w-6xl mx-auto py-16 px-4">
+<header class="text-center mb-16">
+<h1 class="text-4xl md:text-5xl font-bold text-gray-800 dark:text-white">
+      My <span class="text-primary">Services</span>
+</h1>
+</header>
+<main class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
+<div class="relative group">
+<div class="absolute -inset-0.5 bg-primary rounded-lg blur-md opacity-0 group-hover:opacity-75 transition duration-500"></div>
+<div class="relative p-8 bg-gray-200 dark:bg-gray-100/5 backdrop-blur-sm rounded-lg border border-primary/20 flex flex-col items-start space-y-6">
+<span class="material-icons text-white text-5xl">code</span>
+<h2 class="text-2xl font-semibold text-white">UI/UX Design</h2>
+<p class="text-gray-300 text-sm leading-relaxed">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur possimus voluptate iste temporibus impedit nesciunt praesentium, eaque molestiae officia voluptas exercitationem?
+        </p>
+<a class="relative inline-block px-6 py-2 text-sm font-semibold rounded-full bg-primary text-gray-900 overflow-hidden shadow-lg shadow-primary/40 transition-all duration-300 hover:scale-105" href="#">
+<span class="relative">Learn more</span>
+</a>
+</div>
+</div>
+<div class="relative group">
+<div class="absolute -inset-0.5 bg-primary rounded-lg blur-md opacity-0 group-hover:opacity-75 transition duration-500"></div>
+<div class="relative p-8 bg-gray-200 dark:bg-gray-100/5 backdrop-blur-sm rounded-lg border border-primary/20 flex flex-col items-start space-y-6">
+<span class="material-icons text-white text-5xl">crop_free</span>
+<h2 class="text-2xl font-semibold text-white">Web Design</h2>
+<p class="text-gray-300 text-sm leading-relaxed">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur possimus voluptate iste temporibus impedit nesciunt praesentium, eaque molestiae officia voluptas exercitationem?
+        </p>
+<a class="relative inline-block px-6 py-2 text-sm font-semibold rounded-full bg-primary text-gray-900 overflow-hidden shadow-lg shadow-primary/40 transition-all duration-300 hover:scale-105" href="#">
+<span class="relative">Learn more</span>
+</a>
+</div>
+</div>
+<div class="relative group">
+<div class="absolute -inset-0.5 bg-primary rounded-lg blur-md opacity-0 group-hover:opacity-75 transition duration-500"></div>
+<div class="relative p-8 bg-gray-200 dark:bg-gray-100/5 backdrop-blur-sm rounded-lg border border-primary/20 flex flex-col items-start space-y-6">
+<svg class="w-12 h-12 fill-white" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M19.3,4.71a6.66,6.66,0,0,0-9.23.33,6.34,6.34,0,0,0-1.84,4.51,2.18,2.18,0,0,1,1.5,2.14,2.23,2.23,0,0,1-2.22,2.23,2.54,2.54,0,0,1-1.7-1,7.21,7.21,0,0,1-1.12-3.14A7.47,7.47,0,0,1,6.55,4.7a6.66,6.66,0,0,1,9.23-.33A2,2,0,0,0,17.6,3,1.92,1.92,0,0,0,16.24,2a10.08,10.08,0,0,0-10,4.77A9.79,9.79,0,0,0,4.52,14.6,5,5,0,0,0,8,18.42a4.67,4.67,0,0,0,3.38-1.5,4,4,0,0,1,2.83-1.28,3.92,3.92,0,0,1,2.83,1.28,4.67,4.67,0,0,0,3.38,1.5,5,5,0,0,0,3.45-3.82,9.79,9.79,0,0,0-1.72-7.83A2.06,2.06,0,0,0,19.3,4.71Z"></path>
+</svg>
+<h2 class="text-2xl font-semibold text-white">App Design</h2>
+<p class="text-gray-300 text-sm leading-relaxed">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur possimus voluptate iste temporibus impedit nesciunt praesentium, eaque molestiae officia voluptas exercitationem?
+        </p>
+<a class="relative inline-block px-6 py-2 text-sm font-semibold rounded-full bg-primary text-gray-900 overflow-hidden shadow-lg shadow-primary/40 transition-all duration-300 hover:scale-105" href="#">
+<span class="relative">Learn more</span>
+</a>
+</div>
+</div>
+</main>
+</div>
+
+</section>
+
+
+<section class="font-display bg-background-light dark:bg-background-dark text-slate-800 dark:text-slate-200 antialiased relative">
+<div class="container max-w-6xl mx-auto px-4 py-16 md:py-24 relative z-10">
+<header class="text-center mb-12 md:mb-16">
+<h1 class="text-4xl md:text-5xl font-bold text-slate-900 dark:text-white">My <span class="text-primary">Skills</span></h1>
+</header>
+<main class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<div class="bg-white/50 dark:bg-slate-900/50 backdrop-blur-sm p-6 rounded-lg border border-primary/20 dark:border-primary/30 shadow-lg shadow-primary/5 dark:shadow-glow-dark hover:shadow-primary/10 hover:dark:shadow-glow-light transition-shadow duration-300">
+<div class="flex items-center gap-4 mb-6">
+<span class="material-icons-outlined text-primary text-3xl">code</span>
+<h2 class="text-xl font-semibold text-slate-900 dark:text-white">Languages</h2>
+</div>
+<div class="flex flex-wrap gap-4">
+<span class="p-3 bg-slate-200 dark:bg-slate-800 rounded-md text-3xl text-[#F7DF1E]">
+<i class="devicon-javascript-plain" title="JavaScript"></i>
+</span>
+<span class="p-3 bg-slate-200 dark:bg-slate-800 rounded-md text-3xl text-[#A8B9CC]">
+<i class="devicon-c-plain" title="C Language"></i>
+</span>
+</div>
+</div>
+<div class="bg-white/50 dark:bg-slate-900/50 backdrop-blur-sm p-6 rounded-lg border border-primary/20 dark:border-primary/30 shadow-lg shadow-primary/5 dark:shadow-glow-dark hover:shadow-primary/10 hover:dark:shadow-glow-light transition-shadow duration-300">
+<div class="flex items-center gap-4 mb-6">
+<span class="material-icons-outlined text-primary text-3xl">palette</span>
+<h2 class="text-xl font-semibold text-slate-900 dark:text-white">Frontend</h2>
+</div>
+<div class="flex flex-wrap gap-4 text-3xl">
+<span class="p-3 bg-slate-200 dark:bg-slate-800 rounded-md text-[#E34F26]"><i class="devicon-html5-plain" title="HTML5"></i></span>
+<span class="p-3 bg-slate-200 dark:bg-slate-800 rounded-md text-[#1572B6]"><i class="devicon-css3-plain" title="CSS3"></i></span>
+<span class="p-3 bg-slate-200 dark:bg-slate-800 rounded-md text-[#06B6D4]"><i class="devicon-tailwindcss-plain" title="TailwindCSS"></i></span>
+<span class="p-3 bg-slate-200 dark:bg-slate-800 rounded-md text-[#61DAFB]"><i class="devicon-react-original" title="React"></i></span>
+<span class="p-3 bg-slate-200 dark:bg-slate-800 rounded-md text-[#7952B3]"><i class="devicon-bootstrap-plain" title="Bootstrap"></i></span>
+</div>
+</div>
+<div class="bg-white/50 dark:bg-slate-900/50 backdrop-blur-sm p-6 rounded-lg border border-primary/20 dark:border-primary/30 shadow-lg shadow-primary/5 dark:shadow-glow-dark hover:shadow-primary/10 hover:dark:shadow-glow-light transition-shadow duration-300">
+<div class="flex items-center gap-4 mb-6">
+<span class="material-icons-outlined text-primary text-3xl">storage</span>
+<h2 class="text-xl font-semibold text-slate-900 dark:text-white">Backend</h2>
+</div>
+<div class="flex flex-wrap gap-4 text-3xl">
+<span class="p-3 bg-slate-200 dark:bg-slate-800 rounded-md text-[#339933]"><i class="devicon-nodejs-plain" title="Node.js"></i></span>
+<span class="p-3 bg-slate-200 dark:bg-slate-800 rounded-md text-slate-500"><i class="devicon-express-original" title="Express.js"></i></span>
+</div>
+</div>
+<div class="bg-white/50 dark:bg-slate-900/50 backdrop-blur-sm p-6 rounded-lg border border-primary/20 dark:border-primary/30 shadow-lg shadow-primary/5 dark:shadow-glow-dark hover:shadow-primary/10 hover:dark:shadow-glow-light transition-shadow duration-300">
+<div class="flex items-center gap-4 mb-6">
+<span class="material-icons-outlined text-primary text-3xl">dns</span>
+<h2 class="text-xl font-semibold text-slate-900 dark:text-white">Database</h2>
+</div>
+<div class="flex flex-wrap gap-4 text-3xl">
+<span class="p-3 bg-slate-200 dark:bg-slate-800 rounded-md text-[#47A248]"><i class="devicon-mongodb-plain" title="MongoDB"></i></span>
+</div>
+</div>
+<div class="bg-white/50 dark:bg-slate-900/50 backdrop-blur-sm p-6 rounded-lg border border-primary/20 dark:border-primary/30 shadow-lg shadow-primary/5 dark:shadow-glow-dark hover:shadow-primary/10 hover:dark:shadow-glow-light transition-shadow duration-300">
+<div class="flex items-center gap-4 mb-6">
+<span class="material-icons-outlined text-primary text-3xl">build</span>
+<h2 class="text-xl font-semibold text-slate-900 dark:text-white">Tools</h2>
+</div>
+<div class="flex flex-wrap gap-4 text-3xl">
+<span class="p-3 bg-slate-200 dark:bg-slate-800 rounded-md text-[#F05032]"><i class="devicon-git-plain" title="Git"></i></span>
+<span class="p-3 bg-slate-200 dark:bg-slate-800 rounded-md text-slate-900 dark:text-white"><i class="devicon-github-original" title="GitHub"></i></span>
+<span class="p-3 bg-slate-200 dark:bg-slate-800 rounded-md text-[#007ACC]"><i class="devicon-vscode-plain" title="VS Code"></i></span>
+</div>
+</div>
+<div class="bg-white/50 dark:bg-slate-900/50 backdrop-blur-sm p-6 rounded-lg border border-primary/20 dark:border-primary/30 shadow-lg shadow-primary/5 dark:shadow-glow-dark hover:shadow-primary/10 hover:dark:shadow-glow-light transition-shadow duration-300">
+<div class="flex items-center gap-4 mb-6">
+<span class="material-icons-outlined text-primary text-3xl">cloud_upload</span>
+<h2 class="text-xl font-semibold text-slate-900 dark:text-white">Deployment</h2>
+</div>
+<div class="flex flex-wrap gap-4 text-3xl">
+<span class="p-3 bg-slate-200 dark:bg-slate-800 rounded-md text-[#00C7B7]"><i class="devicon-netlify-plain" title="Netlify"></i></span>
+<span class="p-3 bg-slate-200 dark:bg-slate-800 rounded-md text-slate-900 dark:text-white"><i class="devicon-vercel-original" title="Vercel"></i></span>
+<span class="p-3 bg-slate-200 dark:bg-slate-800 rounded-md text-[#FFCA28]"><i class="devicon-firebase-plain" title="Firebase"></i></span>
+</div>
+</div>
+<div class="lg:col-span-3 bg-white/50 dark:bg-slate-900/50 backdrop-blur-sm p-6 rounded-lg border border-primary/20 dark:border-primary/30 shadow-lg shadow-primary/5 dark:shadow-glow-dark hover:shadow-primary/10 hover:dark:shadow-glow-light transition-shadow duration-300">
+<div class="flex items-center gap-4 mb-6">
+<span class="material-icons-outlined text-primary text-3xl">draw</span>
+<h2 class="text-xl font-semibold text-slate-900 dark:text-white">Design &amp; Graphics</h2>
+</div>
+<div class="flex flex-wrap gap-4 text-3xl">
+<span class="p-3 bg-slate-200 dark:bg-slate-800 rounded-md text-[#31A8FF]"><i class="devicon-photoshop-plain" title="Photoshop"></i></span>
+<span class="p-3 bg-slate-200 dark:bg-slate-800 rounded-md text-[#FF9A00]"><i class="devicon-illustrator-plain" title="Illustrator"></i></span>
+<span class="p-3 bg-slate-200 dark:bg-slate-800 rounded-md text-[#F24E1E]"><i class="devicon-figma-plain" title="Figma"></i></span>
+</div>
+</div>
+</main>
+</div>
+
+</section>
+
+
+<section class="bg-background-light dark:bg-background-dark font-display text-slate-700 dark:text-slate-300 antialiased">
+<section class="py-16 sm:py-24">
+<div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="text-center">
+<h2 class="text-3xl sm:text-4xl font-bold tracking-tight text-slate-800 dark:text-slate-100">
+          Featured <span class="text-primary dark:text-primary-light">Projects</span>
+</h2>
+<p class="mt-4 text-lg text-slate-600 dark:text-slate-400 max-w-2xl mx-auto">
+          Here are some of the projects I'm most proud of.
+        </p>
+</div>
+<div class="mt-16 grid gap-10 lg:gap-12 md:grid-cols-2">
+<div class="group relative flex flex-col rounded-xl transition-all duration-300 hover:scale-105">
+<div class="absolute -inset-2 rounded-xl bg-primary-light/30 blur-2xl transition-all duration-500 group-hover:bg-primary-light/40"></div>
+<div class="relative flex flex-col h-full rounded-xl bg-slate-100 dark:bg-slate-900 overflow-hidden ring-1 ring-primary-light/30">
+<div class="overflow-hidden">
+<img alt="Screenshot of the HavenKeys real estate application" class="w-full h-56 object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAurrAx291il58OM1vZ0mV8iQQaaGSjdFXeik_5tWmmPqZDR-vEc41ghy8DEoPWmeFTEEze8RYpF4vrMkI1lbWueu1RXt11n8JKNVne81_G-n95---Nn7UDNFnDh3n1G9hnZkuPFr6XKbBrMkPcbFCah8108xJrokQquVK9uDLTgnxjQLK1r0Yi170gBk8vLW2_2BB6DT7AY0PTbLOEhiqb665HDKic6qwe4jlHhIFWiNjLdFpJaYeLog96zSG0QipLR8rfOG9-PQ2L"/>
+</div>
+<div class="p-6 flex flex-col flex-grow">
+<h3 class="text-xl font-bold text-slate-800 dark:text-slate-50">HavenKeys</h3>
+<p class="mt-2 text-sm text-slate-600 dark:text-slate-400 flex-grow leading-relaxed">
+                A real estate app with secure login, property filters, and Stripe-powered premium listing options.
+              </p>
+<div class="mt-4 flex flex-wrap gap-2">
+<div class="flex items-center gap-2 rounded-full bg-slate-200 dark:bg-slate-800 py-1 px-3">
+<img alt="React icon" class="h-4 w-4" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAQr-kYFNNVMu-ECYBDTunqv8bEzOwcwX_D7q_lUE6VBbwUep8u12Lk3QXWs0o0DyaRCvHsY7D6uH_BT324VEIBJrXQ-xybnofTLFhnvqmLzeD_tgTSYmDqkH6-kGQ45X_Fnp1aYqxlBd0W9q__7r1_Yw1l-xlHv6K1kCgQ2s6CHu3q3aIqdVBkA1M04I1h7iENyEjkYSLLO-gnRVeV4nN1d2tKGXScWGuY1mpoTIrM-N4PtQPiF20O6EkxU5NAYxWyix0Iv6HCP6zH"/>
+<span class="text-xs font-medium text-slate-700 dark:text-slate-300">React</span>
+</div>
+<div class="flex items-center gap-2 rounded-full bg-slate-200 dark:bg-slate-800 py-1 px-3">
+<img alt="Express icon" class="h-4 w-4" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAGFzamp0HFNC9KoGCdNtKdcZaqOLPCDRIyHM4LGaPPMsL8rRmggSd5T9C-zkwES1zEte9YpY2JiFuxLcaNhLAGtE_xRQoCKPj0E6Qz5mmuclm53nOo0ITue9udfvd7LpSh0mRcdU7jloHiRPy9-Nm2_nGnF97OJ4VMH_ukJq0fSFfl6j5Tml0ccAELejCSvE3nAJ5WK3fmFxkfFqBk_nDs_5pbmhA8LTPGo31fgDoZ_qvTNdqPhFBWZzTBwpps0yGqyEYHCYGyM3C8"/>
+<span class="text-xs font-medium text-slate-700 dark:text-slate-300">Express</span>
+</div>
+<div class="flex items-center gap-2 rounded-full bg-slate-200 dark:bg-slate-800 py-1 px-3">
+<img alt="Stripe icon" class="h-4 w-4" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAVcEetuaBXWpEzUffzsa4pXEV8QXzMrveTtUQTP_HwwJ3E2O3Hn9CCkSWy7D1RvJretohebucQ_JKpRR_OgIYpcUCGKerp2tRgAKbVl3jQxnKKTKJNzemut7NslImR_RJqMNIDEIxv7sS_vUpTGWERr43bOHcr2XdFARp9yxUgh5umaGMCyAsZbKmoJJm08uGLZpCi7kNqs3lhbbtC8YxXJNOdtabf4oKPdUjmss7IdaJ7bSLLoEtPPbM9VoIWb3CGxjQ86KuRXzbN"/>
+<span class="text-xs font-medium text-slate-700 dark:text-slate-300">Stripe</span>
+</div>
+<div class="flex items-center gap-2 rounded-full bg-slate-200 dark:bg-slate-800 py-1 px-3">
+<img alt="JWT icon" class="h-4 w-4" src="https://lh3.googleusercontent.com/aida-public/AB6AXuApMZrUYS4v5Fb0a0A415-1JAZqEza5-rJwRkKhHdNiVAUemSC2fAcRjDmG5rMLiWs1rvJ9_6eAEb_dcxWiPq2d4N-KQi3mqUG4UkRYwDIxe7QIZP28b13fkgJkVRgg-s3y9_s5Tzi9BFxWqL1YxwL2C39p7KHzVi0g2O4-9ojt-nIADvet7HcFvzwBuJLW_PO1mf8ltUHEfL0kHI6hzw7RYDfB7C9CRR2DcGeaY-FK3Sbg8ebU5ibanW-6swq3uVr9LCAXDTqkQVVM"/>
+<span class="text-xs font-medium text-slate-700 dark:text-slate-300">JWT</span>
+</div>
+</div>
+<div class="mt-6 flex items-center space-x-4 text-sm font-semibold">
+<a class="flex items-center gap-2 rounded-md bg-primary-light/10 dark:bg-primary-light/10 px-3 py-2 text-primary-dark dark:text-primary-light shadow-button-glow transition-all hover:bg-primary-light/20 hover:scale-105" href="#">
+<span class="material-symbols-outlined text-lg">link</span>
+                  Live Site
+                </a>
+<a class="flex items-center gap-2 rounded-md bg-primary-light/10 dark:bg-primary-light/10 px-3 py-2 text-primary-dark dark:text-primary-light shadow-button-glow transition-all hover:bg-primary-light/20 hover:scale-105" href="#">
+<img alt="GitHub icon" class="h-5 w-5 invert-0 dark:invert" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAIrAVDGLR7QVAirwOJRmpXIsDcWgCteP55jxM-gh8cPvX0PEIgoZtdIFV6AQ1iF-D5eaRCgfX2O4OM84wzC7NqVG_EV8NdeWV-EIOnOw7Kf-pQxAONSq_3g-er5FHJgMQdQbyelmETU2bHJr3xCBstZyMYvGC1e4X64ve6aCPM2U14w6tyjB0nB8mzmtl0S5YNGQ5eJjUlybPk-xKqHkvg-d8foDmN0OFIPTOTXlxpiFBsS2nGbVShMHxEiQhTc8rSj1QMJxMb0foX"/>
+                  GitHub
+                </a>
+</div>
+</div>
+</div>
+</div>
+<div class="group relative flex flex-col rounded-xl transition-all duration-300 hover:scale-105">
+<div class="absolute -inset-2 rounded-xl bg-primary-light/30 blur-2xl transition-all duration-500 group-hover:bg-primary-light/40"></div>
+<div class="relative flex flex-col h-full rounded-xl bg-slate-100 dark:bg-slate-900 overflow-hidden ring-1 ring-primary-light/30">
+<div class="overflow-hidden">
+<img alt="Screenshot of the Marathon Zone application for runners" class="w-full h-56 object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCRKCPQLfRLXm6Sfa-QnUqm68FfUepmN7XXFoo9nwqBtKpVlUjHIyspCt0C45H5-34_ePFPmQ3jZfOAMLOqg0CKKAR1TaZFqJjyCA8TPfSuNMPJweuu7qgtS56A-ZEfcZ7pPX2MwztUtKetg_L5wXq3nl7nZMeOLGBjvvFXG_7achhQL12pDECf5kVpJIK6CUZCJsqtRgHIMdDJqP9F0RowRUWrmOYtlvD-T4W8x1pdIVdyxOIzz6DpsO0NJdGjhHBYpLH9o421XPFk"/>
+</div>
+<div class="p-6 flex flex-col flex-grow">
+<h3 class="text-xl font-bold text-slate-800 dark:text-slate-50">Marathon Zone</h3>
+<p class="mt-2 text-sm text-slate-600 dark:text-slate-400 flex-grow leading-relaxed">
+                A full-stack event platform connecting marathon organizers and participants with real-time features and dark mode.
+              </p>
+<div class="mt-4 flex flex-wrap gap-2">
+<div class="flex items-center gap-2 rounded-full bg-slate-200 dark:bg-slate-800 py-1 px-3">
+<img alt="React icon" class="h-4 w-4" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAFy1ZIqqjjEoKUdyLsTrlOrR-OyD_Wwf4fzG1TFrN9IaB0qfz_VQ2iNUVT8bMNu4uK13j9iRbsZRnRsiGcjczZyVKDr1Z02ckD_fqdA2ISnv9cFFsEUZhXR_wRY-JSsTYi_b7q7-0jfOAASjr9abKfI0jRd5N9jHn7Pyfje63oTtfYqDR3A1CPG7vErlxmZ5-1FzMr0jKGwC9x8BGK3UKVeQN6COuu3CWEBU8AnyApSCGSi9Fsxu4ZN6CzjGYhsl63gT7J-UAuaZZm"/>
+<span class="text-xs font-medium text-slate-700 dark:text-slate-300">React</span>
+</div>
+<div class="flex items-center gap-2 rounded-full bg-slate-200 dark:bg-slate-800 py-1 px-3">
+<img alt="Firebase icon" class="h-4 w-4" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBYx_Loylc8UxPkITNtqzlCLCX2loPICUXlpMTbf3ycSQ2V_iCrv4ndrEcAUrx2rQL6xWTFWkCs0yNRiziEdTk5p9az7118Up9r3fh1eYJPnKiOAKqW8NzdyI1uQdZnUWXft658bsghW5LpxkUKs53wAWnefop77s_SBaL1qBUh4BTbZ9cFwuAstZZGy-4SjOcop4cSrW65q7d4yLG4aQwwpNOOIqVdY12YVsWbB7VrFvsUry2MXDGB6B3ALgaD0gPXHLQMw566a8o4"/>
+<span class="text-xs font-medium text-slate-700 dark:text-slate-300">Firebase</span>
+</div>
+<div class="flex items-center gap-2 rounded-full bg-slate-200 dark:bg-slate-800 py-1 px-3">
+<img alt="Node.js icon" class="h-4 w-4" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD1whiHjCeIH354ccAS3gL6LSP4iKJ_AQPW9r-Dc4nIsaIl_bwSpWKvuj1nS3LuEmHOY17BYuFAa6k1bUmQGT6QnxgSNB2WL-3N_LMUKLM4TM28Azx-AeyX54vm45avYBzTxaQtgpJNbRW089di6Ee9FWAm_U3ptMQKYeQ1BexYicFC2-m4qBZRJ-fr2q1X9asFlQ1_pjSNyeePI6glARbRy1-gIUph99PMTkvZMRub3UgAomYAnwjh9EVx_VmM4rf7GpPyoWS7vJ1l"/>
+<span class="text-xs font-medium text-slate-700 dark:text-slate-300">Node.js</span>
+</div>
+<div class="flex items-center gap-2 rounded-full bg-slate-200 dark:bg-slate-800 py-1 px-3">
+<img alt="MongoDB icon" class="h-4 w-4" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAXQG2jP7_HcXrIGQr9IXKEMCccQv6YXtOVQs-tDw-4yXpVLRzwHGFGOYBoO8NjzHwBxnRGu3f1o2I8yuvuoBGCqhAUzp81f5KAo2g7MdQSLuvcohwJ1Pv92E-lWmTSmNDa_fPyfsNkEce-IDWjrQ3rNC6F7_T96XYhXkfm662WJXDoIKwlhaZYTDh2iUpcRonl1OOaARejKZUk1FDvvsI8qIz6hJRXGYhUTif4BGZpt682rTrMZMjJhJCgfWI1KluiVadOpfngyp-q"/>
+<span class="text-xs font-medium text-slate-700 dark:text-slate-300">MongoDB</span>
+</div>
+</div>
+<div class="mt-6 flex items-center space-x-4 text-sm font-semibold">
+<a class="flex items-center gap-2 rounded-md bg-primary-light/10 dark:bg-primary-light/10 px-3 py-2 text-primary-dark dark:text-primary-light shadow-button-glow transition-all hover:bg-primary-light/20 hover:scale-105" href="#">
+<span class="material-symbols-outlined text-lg">link</span>
+                  Live Site
+                </a>
+<a class="flex items-center gap-2 rounded-md bg-primary-light/10 dark:bg-primary-light/10 px-3 py-2 text-primary-dark dark:text-primary-light shadow-button-glow transition-all hover:bg-primary-light/20 hover:scale-105" href="#">
+<img alt="GitHub icon" class="h-5 w-5 invert-0 dark:invert" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDlMfznBmNWkscPMafuGPIl-wT1EQ5oVQ3xIjBri7_TvZEq9V92GlburZOQciVBUTImDBn2vK1mDQnyDLJOaRUTL8oDS9ihYCU4vz0TYu8ZA1eXHg4Cv4gP_ZEJNFH0dMVb4TAozQu94SL9UIUJTxoKNUBkdHB0ON9Axe84CWUtn-Re2DB2bkUIsys8eiZ5swh6n4cdKL7PUGGCeCBCbKzFz9sifM-9vIWvelyGwEx1U2gXH8yniCL6X3Ch6eEM9kdQMrsEePKYZ1Ei"/>
+                  GitHub
+                </a>
+</div>
+</div>
+</div>
+</div>
+<div class="group relative flex flex-col rounded-xl transition-all duration-300 hover:scale-105">
+<div class="absolute -inset-2 rounded-xl bg-primary-light/30 blur-2xl transition-all duration-500 group-hover:bg-primary-light/40"></div>
+<div class="relative flex flex-col h-full rounded-xl bg-slate-100 dark:bg-slate-900 overflow-hidden ring-1 ring-primary-light/30">
+<div class="overflow-hidden">
+<img alt="Screenshot of the Green Circle gardening subscription platform" class="w-full h-56 object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAUYp5hpUgm-59yyiHKWPSk9bhewPDwhPneNoEF2GxJJ4sHp-MXZQXTbg48xqZzopp-qOhWMt3lj0gY3cpr2aHLGUm1Rj3xmNuLq2ydR_mKbGjvrBzOfb95ZezLGoAMi2o2EVQjiQe5BdVzKKcFBR0xFFSGszYQQ8HLzYkg2YBOE4UtcF5IeSWigPfxgUW52dVviK6AAcoFKTlbtI2EPz0jWl-ZsCW_hLGspbxN4SxrxQoBj96OvcZW4y4hpiVYPq0n3fsgoucppeEL"/>
+</div>
+<div class="p-6 flex flex-col flex-grow">
+<h3 class="text-xl font-bold text-slate-800 dark:text-slate-50">Green Circle</h3>
+<p class="mt-2 text-sm text-slate-600 dark:text-slate-400 flex-grow leading-relaxed">
+                A gardening subscription platform with secure payments, real-time slot booking, and full admin dashboard.
+              </p>
+<div class="mt-4 flex flex-wrap gap-2">
+<div class="flex items-center gap-2 rounded-full bg-slate-200 dark:bg-slate-800 py-1 px-3">
+<img alt="JavaScript icon" class="h-4 w-4" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB2qSYCqdSquvrHCT4ucz2Grx6yD4SSf1K9i1UCBSpwAc3UHR7iXoxu_mTdZSiLzmoHV5rRnxPzj7_En8FRfMm8KAIcCCgtcavc46ycPfN3a3suD5pl6auOXPDYj_6M_REDX1g2JM7HmR6TKZ3j2cx5ZNqiBL2DQ5dgd0iY_Y-WmIbVGdjXQYFmDGqAloBHF8cCstbPlCFhR5ANgijSXCsBqlujvtiKnPvnPOn_GKdA4NE3W-fNWHPllfOuUEMxdBNgBobUcdM7L8hs"/>
+<span class="text-xs font-medium text-slate-700 dark:text-slate-300">JavaScript</span>
+</div>
+<div class="flex items-center gap-2 rounded-full bg-slate-200 dark:bg-slate-800 py-1 px-3">
+<img alt="React icon" class="h-4 w-4" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDCcWNgpVHYj54u3u52TYtZzzK2hMecwbU74OwauQbIHbyQvoGOX9UhfD6m3CfaAhncEW390zWOu0y35LzmosiT_iPmyV_ZQAM4p1pa8w4NoglGkna8CsOKflP1TyP72yJ8rpRz_JNdrg9vtlFBfruxZD5FT1XZ0QmqvC7OMPru9f0yBtkrZOfrHP1X1qMUq4KbbFyMsW_eobwuP2HsmMBzbUTIIOtGu55eIWN2IduLbQ9y18a113O0jIN_ljMrs8H5axhLffw6JCSw"/>
+<span class="text-xs font-medium text-slate-700 dark:text-slate-300">React</span>
+</div>
+<div class="flex items-center gap-2 rounded-full bg-slate-200 dark:bg-slate-800 py-1 px-3">
+<img alt="Express icon" class="h-4 w-4" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDK1dqJwuW7I_vJ7SbrSvRk4Mq0dGXzC2M2y5OnNngWiMFbZ-nWGsVABZqAAVQTOHv1QgCD8QC4lCoKH1tJGlkBT8KfKfO0SMG3_dTbAs2jpd-5YIAdSMvWT7rx5jGlsZIb6U1QcuklEKtgTjAokt_NZl9uHfcIWMOLuvXsIOc1cial0LR6IBhr72c2jMD_Scj82f7Pw0_r0hTQm38iKYxpRdB-GgqSMx2RLB82X2OeUqZnuvoirt3cSv63jh2VjhlgHH-9TN4KipEr"/>
+<span class="text-xs font-medium text-slate-700 dark:text-slate-300">Express</span>
+</div>
+<div class="flex items-center gap-2 rounded-full bg-slate-200 dark:bg-slate-800 py-1 px-3">
+<img alt="MongoDB icon" class="h-4 w-4" src="https://lh3.googleusercontent.com/aida-public/AB6AXuALMaXZTOe5s5TLU_RoU5WNmeqlaOrDmR890x06nF8oP8txMPzxC-j5Gj6mmCLGz5DXaxUbSRpqKAN-8w45X_TDSxwCJU2YtwDwXmfC1o0s0O0OZdho4ZYqfk-M97MpbvLb1vHxzS4-ViNr2CPj7WuJ6cNaCBOEfHByq5CKzDCCKGgiu8MO4DddubmczD4jZmoY8qLWPi8P8SxQ7qHOyHVseQKvbGqM2k1g8V7hmlkTor0YVdlefdSf13NyStCKEme8DFd7Id2WgJyQ"/>
+<span class="text-xs font-medium text-slate-700 dark:text-slate-300">MongoDB</span>
+</div>
+</div>
+<div class="mt-6 flex items-center space-x-4 text-sm font-semibold">
+<a class="flex items-center gap-2 rounded-md bg-primary-light/10 dark:bg-primary-light/10 px-3 py-2 text-primary-dark dark:text-primary-light shadow-button-glow transition-all hover:bg-primary-light/20 hover:scale-105" href="#">
+<span class="material-symbols-outlined text-lg">link</span>
+                  Live Site
+                </a>
+<a class="flex items-center gap-2 rounded-md bg-primary-light/10 dark:bg-primary-light/10 px-3 py-2 text-primary-dark dark:text-primary-light shadow-button-glow transition-all hover:bg-primary-light/20 hover:scale-105" href="#">
+<img alt="GitHub icon" class="h-5 w-5 invert-0 dark:invert" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB8tDOGTI4Ctt1EhPMdSXsfizyvlqfK7RInheVtWsTnM0QsOlKf5B94UKEOXVfK6dWKpW6lWhMOG0-B_no2k5rpd6h5vJgoM7XA4EkszGJh1v7Ubp1knQbTIN1S1a9zqlRG_GOeBkRMfB0_NAb5HkTVJz_Ai-6XFc847DkjI4uUOiCql6fGV9eTBSXN0BlhsV14q97jXOYMJwt0inpyzHymZfFY21H3HQkTkCuIt2-n8aTPYPELqzKHyIhCfuQ1UzbOuFYvZmJ2REAl"/>
+                  GitHub
+                </a>
+</div>
+</div>
+</div>
+</div>
+<div class="group relative flex flex-col rounded-xl transition-all duration-300 hover:scale-105">
+<div class="absolute -inset-2 rounded-xl bg-primary-light/30 blur-2xl transition-all duration-500 group-hover:bg-primary-light/40"></div>
+<div class="relative flex flex-col h-full rounded-xl bg-slate-100 dark:bg-slate-900 overflow-hidden ring-1 ring-primary-light/30">
+<div class="overflow-hidden">
+<img alt="Screenshot of the Event Hub management application" class="w-full h-56 object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDq9dnrZ9VypczW_4zm4ZiXsQ4bMIuNkIOot0OYwfIcZWH0GWwIohiF2MnxDSZwsiBYt0739_cwre1KTfJHt2MOgqzBYGayzXWiFwSbuMmAmGiaZgmPu-BUKnJB5U9ItIOZE7zkN2LWlFKPYQV4pOVznnmnpREzQmuHvLVJSHHOnaBrKrzpfXgMaBAPhdhqHnaGYPoSo53THfIT7CA9dlaHM75uB3IT_hXQyV4gz8oCbVkqKU9LHSC8oaZ9iGXjp0AaGkwV9n6Mj2lg"/>
+</div>
+<div class="p-6 flex flex-col flex-grow">
+<h3 class="text-xl font-bold text-slate-800 dark:text-slate-50">Event Hub</h3>
+<p class="mt-2 text-sm text-slate-600 dark:text-slate-400 flex-grow leading-relaxed">
+                A full-stack MERN app for creating, managing, and joining events—designed to be secure, responsive, and user-friendly for organizers and attendees alike.
+              </p>
+<div class="mt-4 flex flex-wrap gap-2">
+<div class="flex items-center gap-2 rounded-full bg-slate-200 dark:bg-slate-800 py-1 px-3">
+<img alt="React icon" class="h-4 w-4" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBa8HtWqgjfP1ADqsxr-z6W_cjS3-2kBflUJSoHo8FJURBEQ9zblK4bjqlXK3Rxh4Tn8CD9hHMAiqGn4P6Xi8Qom7YX68wHq-HKDNc4dxgBMV2CMAD8xZVEyfG2QjFBbiTVxRY-QssAbFm-_0WJckcnLMElG6wJLzr-y-zrWWOcyP8CNZIsUzfQ3hOdgQC7nHWiAFjHKA0VygPtEyhokSrUzLHPF2qpvRKkKxyZLKex4B6SHGCC8XU2fli4zMxROU1wroPBUZqC3Xhg"/>
+<span class="text-xs font-medium text-slate-700 dark:text-slate-300">React</span>
+</div>
+<div class="flex items-center gap-2 rounded-full bg-slate-200 dark:bg-slate-800 py-1 px-3">
+<img alt="Express icon" class="h-4 w-4" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDQjJVgRA6saNgDO2X1wKzw_unwmR1ADGq2yFMOxJdp_F_qmY0jHm9I0rEyVACyq9-M-jGiWR5XGXADzu6VdOrSDg6m1m4zVDUeyxdsNqvegTnSCKaUnzmudbAqmhc6DD-LQl7BaRzO94_7cJE7cQfvDQTwlcasnWFC2FnxkXZmeCTrRLvhbCJ4wU2UGNXkEAktEPzjzGZRDjV-wttChbWbqJHxppjPwLoUh4m19KIrf-RPz_MaLdZPr86qFf2Vl6HYJK6ufOpLfgX8"/>
+<span class="text-xs font-medium text-slate-700 dark:text-slate-300">Express</span>
+</div>
+<div class="flex items-center gap-2 rounded-full bg-slate-200 dark:bg-slate-800 py-1 px-3">
+<span class="material-symbols-outlined text-base">lock</span>
+<span class="text-xs font-medium text-slate-700 dark:text-slate-300">Custom Auth</span>
+</div>
+<div class="flex items-center gap-2 rounded-full bg-slate-200 dark:bg-slate-800 py-1 px-3">
+<img alt="JWT icon" class="h-4 w-4" src="https://lh3.googleusercontent.com/aida-public/AB6AXuASnUQVs8xQz4ZvMEYRY3oPJiIYFmIFbr0_iLsW8tr1nLisC_1_x5q4si8nP4T6L1dlP9mRcBfvI3WSepyJKQXBbQcViGhu_fpHvcyQvWdBk8r8YxWkA9yksS8CslKE5UuCcCZKCzWdR3clKHpYUhlznMq7yT4sGzjiwemgHu2CFo3USRvzgPcZqTyOE9pCfRZWE5P4KKqMZpw8NnXIRYZAjf8WlaPb92v97aoE6T-rPNdDYbKhcvJqj4aTMGVLKGJSnT9ryqsyEfV0"/>
+<span class="text-xs font-medium text-slate-700 dark:text-slate-300">JWT</span>
+</div>
+</div>
+<div class="mt-6 flex items-center space-x-4 text-sm font-semibold">
+<a class="flex items-center gap-2 rounded-md bg-primary-light/10 dark:bg-primary-light/10 px-3 py-2 text-primary-dark dark:text-primary-light shadow-button-glow transition-all hover:bg-primary-light/20 hover:scale-105" href="#">
+<span class="material-symbols-outlined text-lg">link</span>
+                  Live Site
+                </a>
+<a class="flex items-center gap-2 rounded-md bg-primary-light/10 dark:bg-primary-light/10 px-3 py-2 text-primary-dark dark:text-primary-light shadow-button-glow transition-all hover:bg-primary-light/20 hover:scale-105" href="#">
+<img alt="GitHub icon" class="h-5 w-5 invert-0 dark:invert" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBGF6ih5HclGXjUpi1HtS78_oA718MwD2d0MUmsSyv73KUjJZP8mU1VwVYgXQuZKtfsHIJqKUd2fuTgPOepuVQXtlBFJSh_XegtE4ahIjIGj9YsSXVZ7OyDeIzzlL7BWnvc71-06rou5VfWRHTd5CckLaZnIQrjyGgFatahbsGmkBWvQ37hfq7wxpbpZbT9FBJWp1Bm43sxXJBM8cmoVzs3EyY6T7fLzZqXbrcsjKNlqSDItUbZ5psizaMdkYC06PMuTKgXsuZ8C2IX"/>
+                  GitHub
+                </a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</section>
+
+
+<section class="font-display bg-background-light dark:bg-background-dark flex items-center justify-center min-h-screen p-4 sm:p-6 lg:p-8">
+<div class="w-full max-w-6xl mx-auto bg-white/50 dark:bg-slate-900/50 backdrop-blur-sm shadow-2xl rounded-2xl overflow-hidden">
+<div class="grid grid-cols-1 lg:grid-cols-2">
+<div class="p-8 sm:p-12 text-slate-800 dark:text-slate-200">
+<h2 class="text-3xl sm:text-4xl font-bold mb-4">Contact <span class="text-primary">Me</span></h2>
+<h3 class="text-xl sm:text-2xl font-semibold text-slate-700 dark:text-slate-100 mb-4">Let's Work Together</h3>
+<p class="text-slate-600 dark:text-slate-400 mb-8 leading-relaxed">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum nobis possimus tenetur quidem fugit? Dolorum cupiditate deleniti perspiciatis ea soluta repellat dignissimos eum assumenda, iusto quas nulla ullam. Quaerat, maiores!
+        </p>
+<div class="space-y-4 mb-10">
+<div class="flex items-center gap-4 text-slate-700 dark:text-slate-300">
+<span class="material-icons text-primary text-2xl">send</span>
+<span>contact@gmail.com</span>
+</div>
+<div class="flex items-center gap-4 text-slate-700 dark:text-slate-300">
+<span class="material-icons text-primary text-2xl">phone</span>
+<span>0123456789</span>
+</div>
+</div>
+<div class="flex items-center space-x-4">
+<a class="group w-10 h-10 flex items-center justify-center border-2 border-primary rounded-full text-primary hover:bg-primary hover:text-background-dark transition-all duration-300" href="#">
+<i class="fab fa-facebook-f text-lg"></i>
+</a>
+<a class="group w-10 h-10 flex items-center justify-center border-2 border-primary rounded-full text-primary hover:bg-primary hover:text-background-dark transition-all duration-300" href="#">
+<i class="fab fa-twitter text-lg"></i>
+</a>
+<a class="group w-10 h-10 flex items-center justify-center border-2 border-primary rounded-full text-primary hover:bg-primary hover:text-background-dark transition-all duration-300" href="#">
+<i class="fab fa-instagram text-lg"></i>
+</a>
+<a class="group w-10 h-10 flex items-center justify-center border-2 border-primary rounded-full text-primary hover:bg-primary hover:text-background-dark transition-all duration-300" href="#">
+<i class="fab fa-linkedin-in text-lg"></i>
+</a>
+</div>
+</div>
+<div class="p-8 sm:p-12 bg-white/20 dark:bg-black/20">
+<form action="#" class="space-y-6" method="POST">
+<div>
+<label class="sr-only" for="name">Your Name</label>
+<input class="input-field  w-full" id="name" name="name" placeholder="Enter Your Name" type="text"/>
+</div>
+<div>
+<label class="sr-only " for="email">Your Email</label>
+<input class="input-field w-full" id="email" name="email" placeholder="Enter Your Email" type="email"/>
+</div>
+<div>
+<label class="sr-only w-full" for="subject">Subject</label>
+<input class="input-field w-full" id="subject" name="subject" placeholder="Enter Your Subject" type="text"/>
+</div>
+<div >
+<label class="sr-only " for="message">Message</label>
+<textarea class="input-field w-full" id="message" name="message" placeholder="Enter Your Message" rows="5"></textarea>
+</div>
+<div>
+<button class="w-full bg-primary text-background-dark font-bold text-lg py-3 px-6 rounded-full shadow-lg shadow-primary/40 hover:shadow-xl hover:shadow-primary/60 focus:outline-none focus:ring-4 focus:ring-primary/50 transition-all duration-300 ease-in-out transform hover:-translate-y-1" type="submit">
+              Submit
+            </button>
+</div>
+</form>
+</div>
+</div>
+</div>
+
+</section>
+
+
+</body>
+</html>
