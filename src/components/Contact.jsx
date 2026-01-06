@@ -1,11 +1,37 @@
 import React, { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { FaFacebookF, FaLinkedinIn, FaGithub, FaWhatsapp } from 'react-icons/fa';
+import toast from 'react-hot-toast';
 
 gsap.registerPlugin(ScrollTrigger);
 
 const Contact = () => {
     const sectionRef = useRef(null);
+
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        const formData = new FormData(e.target);
+
+        // Show loading toast
+        const loadingToast = toast.loading('Sending message...');
+
+        try {
+            const response = await fetch("https://formsubmit.co/ajax/sumiwdcse@gmail.com", {
+                method: "POST",
+                body: formData
+            });
+
+            if (response.ok) {
+                toast.success('Message Sent Successfully!', { id: loadingToast });
+                e.target.reset(); // Clear the form
+            } else {
+                throw new Error('Failed to send');
+            }
+        } catch (error) {
+            toast.error('Something went wrong. Please try again.', { id: loadingToast });
+        }
+    };
 
     useEffect(() => {
         const ctx = gsap.context(() => {
@@ -55,53 +81,58 @@ const Contact = () => {
                 <div className="relative w-full bg-white/50 dark:bg-slate-900/50 backdrop-blur-sm shadow-2xl rounded-2xl overflow-hidden ring-1 ring-primary-light/30">
                     <div className="grid grid-cols-1 lg:grid-cols-2">
                         <div className="contact-left p-8 sm:p-12 text-slate-800 dark:text-slate-200">
-                            <h2 className="contact-title text-4xl md:text-5xl font-bold mb-4">Contact <span className="text-primary">Me</span></h2>
-                            <h3 className="text-xl sm:text-2xl font-semibold text-slate-700 dark:text-slate-100 mb-4">Let's Work Together</h3>
+                            <h2 className="contact-title text-4xl md:text-5xl font-bold font-title mb-4">Contact <span className="text-primary">Me</span></h2>
+                            <h3 className="text-xl sm:text-2xl font-semibold text-slate-700 dark:text-slate-100 mb-4 font-title">Let's Work Together</h3>
                             <p className="text-slate-600 dark:text-slate-400 mb-8 leading-relaxed">
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum nobis possimus tenetur quidem fugit? Dolorum cupiditate deleniti perspiciatis ea soluta repellat dignissimos eum assumenda, iusto quas nulla ullam. Quaerat, maiores!
+                                I'm excited to collaborate with you on your next project. Whether you have a specific vision in mind or need help developing one, I'm here to bring your ideas to life with clean code and stunning design.
                             </p>
                             <div className="space-y-4 mb-10">
                                 <div className="flex items-center gap-4 text-slate-700 dark:text-slate-300">
                                     <span className="material-icons text-primary text-2xl">send</span>
-                                    <span>contact@gmail.com</span>
+                                    <span>sumiwdcse@gmail.com</span>
                                 </div>
                                 <div className="flex items-center gap-4 text-slate-700 dark:text-slate-300">
                                     <span className="material-icons text-primary text-2xl">phone</span>
-                                    <span>0123456789</span>
+                                    <span>01863494424</span>
                                 </div>
                             </div>
                             <div className="flex items-center space-x-4">
-                                <a className="group w-10 h-10 flex items-center justify-center border-2 border-primary rounded-full text-primary hover:bg-primary hover:text-background-dark transition-all duration-300" href="#">
-                                    <i className="fab fa-facebook-f text-lg"></i>
+                                <a className="group w-10 h-10 flex items-center justify-center border-2 border-primary rounded-full text-primary hover:bg-primary hover:text-background-dark transition-all duration-300" href="https://www.facebook.com/sumi.akter.cse" target="_blank" rel="noopener noreferrer">
+                                    <FaFacebookF className="text-lg" />
                                 </a>
-                                <a className="group w-10 h-10 flex items-center justify-center border-2 border-primary rounded-full text-primary hover:bg-primary hover:text-background-dark transition-all duration-300" href="#">
-                                    <i className="fab fa-twitter text-lg"></i>
+                                <a className="group w-10 h-10 flex items-center justify-center border-2 border-primary rounded-full text-primary hover:bg-primary hover:text-background-dark transition-all duration-300" href="https://www.linkedin.com/in/mst-sumi-akter-cse/" target="_blank" rel="noopener noreferrer">
+                                    <FaLinkedinIn className="text-lg" />
                                 </a>
-                                <a className="group w-10 h-10 flex items-center justify-center border-2 border-primary rounded-full text-primary hover:bg-primary hover:text-background-dark transition-all duration-300" href="#">
-                                    <i className="fab fa-instagram text-lg"></i>
+                                <a className="group w-10 h-10 flex items-center justify-center border-2 border-primary rounded-full text-primary hover:bg-primary hover:text-background-dark transition-all duration-300" href="https://github.com/Mst-Sumi-Akter" target="_blank" rel="noopener noreferrer">
+                                    <FaGithub className="text-lg" />
                                 </a>
-                                <a className="group w-10 h-10 flex items-center justify-center border-2 border-primary rounded-full text-primary hover:bg-primary hover:text-background-dark transition-all duration-300" href="#">
-                                    <i className="fab fa-linkedin-in text-lg"></i>
+                                <a className="group w-10 h-10 flex items-center justify-center border-2 border-primary rounded-full text-primary hover:bg-primary hover:text-background-dark transition-all duration-300" href="https://wa.link/gldc7j" target="_blank" rel="noopener noreferrer">
+                                    <FaWhatsapp className="text-lg" />
                                 </a>
                             </div>
                         </div>
                         <div className="contact-right p-8 sm:p-12 bg-white/20 dark:bg-black/20">
-                            <form action="#" className="space-y-6" method="POST">
+                            <form onSubmit={handleSubmit} className="space-y-6">
+                                {/* FormSubmit Configuration */}
+                                <input type="hidden" name="_subject" value="New Portfolio Message!" />
+                                <input type="hidden" name="_template" value="table" />
+                                <input type="hidden" name="_captcha" value="false" />
+
                                 <div>
                                     <label className="sr-only" htmlFor="name">Your Name</label>
-                                    <input className="input-field w-full" id="name" name="name" placeholder="Enter Your Name" type="text" />
+                                    <input className="input-field w-full" id="name" name="name" placeholder="Enter Your Name" type="text" required />
                                 </div>
                                 <div>
                                     <label className="sr-only" htmlFor="email">Your Email</label>
-                                    <input className="input-field w-full" id="email" name="email" placeholder="Enter Your Email" type="email" />
+                                    <input className="input-field w-full" id="email" name="email" placeholder="Enter Your Email" type="email" required />
                                 </div>
                                 <div>
                                     <label className="sr-only w-full" htmlFor="subject">Subject</label>
-                                    <input className="input-field w-full" id="subject" name="subject" placeholder="Enter Your Subject" type="text" />
+                                    <input className="input-field w-full" id="subject" name="subject" placeholder="Enter Your Subject" type="text" required />
                                 </div>
                                 <div>
                                     <label className="sr-only" htmlFor="message">Message</label>
-                                    <textarea className="input-field w-full" id="message" name="message" placeholder="Enter Your Message" rows="5"></textarea>
+                                    <textarea className="input-field w-full" id="message" name="message" placeholder="Enter Your Message" rows="5" required></textarea>
                                 </div>
                                 <div>
                                     <button className="w-full bg-primary text-background-dark font-bold text-lg py-3 px-6 rounded-full shadow-lg shadow-primary/40 hover:shadow-xl hover:shadow-primary/60 focus:outline-none focus:ring-4 focus:ring-primary/50 transition-all duration-300 ease-in-out transform hover:-translate-y-1" type="submit">

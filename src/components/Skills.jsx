@@ -119,7 +119,7 @@ const Skills = () => {
         <section id="skills" ref={sectionRef} className="font-display bg-background-light dark:bg-background-dark text-slate-800 dark:text-slate-200 antialiased relative">
             <div className="container max-w-6xl mx-auto px-4 py-16 md:py-24 relative z-10">
                 <header className="skills-title text-center mb-12 md:mb-16">
-                    <h1 className="text-4xl md:text-5xl font-bold text-slate-900 dark:text-white">My <span className="text-primary">Skills</span></h1>
+                    <h1 className="text-4xl md:text-5xl font-bold font-title text-slate-900 dark:text-white">My <span className="text-primary">Skills</span></h1>
                 </header>
                 <main className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                     {skillCategories.map((category, index) => (

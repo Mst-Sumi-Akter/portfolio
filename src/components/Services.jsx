@@ -65,7 +65,7 @@ const Services = () => {
         <section ref={sectionRef} id="services" className="font-display bg-background-light dark:bg-background-dark min-h-screen flex items-center justify-center p-4">
             <div className="w-full max-w-6xl mx-auto py-16 px-4">
                 <header className="text-center mb-16">
-                    <h1 className="services-title text-4xl md:text-5xl font-bold text-gray-800 dark:text-white">
+                    <h1 className="services-title text-4xl md:text-5xl font-bold font-title text-gray-800 dark:text-white">
                         My <span className="text-primary">Services</span>
                     </h1>
                 </header>

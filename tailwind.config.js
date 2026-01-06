@@ -16,6 +16,7 @@ export default {
             },
             fontFamily: {
                 display: ["Poppins", "sans-serif"],
+                title: ["Outfit", "sans-serif"],
             },
             borderRadius: {
                 DEFAULT: "0.5rem", // 8px
