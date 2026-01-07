@@ -62,7 +62,7 @@ const Services = () => {
     ];
 
     return (
-        <section ref={sectionRef} id="services" className="font-display bg-background-light dark:bg-background-dark min-h-screen flex items-center justify-center p-4">
+        <section ref={sectionRef} id="services" className="font-display min-h-screen flex items-center justify-center p-4 relative z-10 bg-white/50 dark:bg-slate-900/50 backdrop-blur-sm">
             <div className="w-full max-w-6xl mx-auto py-16 px-4">
                 <header className="text-center mb-16">
                     <h1 className="services-title text-4xl md:text-5xl font-bold font-title text-gray-800 dark:text-white">
@@ -72,7 +72,7 @@ const Services = () => {
                 <main className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                     {services.map((service, index) => (
                         <div key={index} className="service-card relative group h-full">
-                            <div className="absolute -inset-2 rounded-xl bg-primary-light/30 blur-2xl transition-all duration-500 group-hover:bg-primary-light/40"></div>
+                            <div className="absolute -inset-2 rounded-xl bg-primary-light/10 blur-xl transition-all duration-500 group-hover:bg-primary-light/20"></div>
                             <div className="relative p-8 bg-gray-200 dark:bg-gray-100/5 backdrop-blur-sm rounded-lg border border-primary/20 flex flex-col items-start space-y-6 h-full transition-transform duration-300 group-hover:scale-[1.02]">
                                 {service.icon}
                                 <h2 className="text-2xl font-semibold text-gray-800 dark:text-white">{service.title}</h2>

@@ -1,3 +1,6 @@
+import forms from '@tailwindcss/forms';
+import typography from '@tailwindcss/typography';
+
 /** @type {import('tailwindcss').Config} */
 export default {
     content: [
@@ -16,7 +19,7 @@ export default {
             },
             fontFamily: {
                 display: ["Poppins", "sans-serif"],
-                title: ["Outfit", "sans-serif"],
+                title: ["Montserrat", "sans-serif"],
             },
             borderRadius: {
                 DEFAULT: "0.5rem", // 8px
@@ -27,7 +30,7 @@ export default {
         },
     },
     plugins: [
-        require('@tailwindcss/forms'),
-        require('@tailwindcss/typography'),
+        forms,
+        typography,
     ],
 }

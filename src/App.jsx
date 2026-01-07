@@ -1,9 +1,10 @@
-import React, { useEffect, Suspense, lazy } from 'react';
+import React, { Suspense, lazy } from 'react';
 import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 import Lenis from 'lenis';
 import { Toaster } from 'react-hot-toast';
 import Header from './components/Header';
 import Hero from './components/Hero';
+import BackgroundAnimation from './components/BackgroundAnimation';
 import About from './components/About';
 import Services from './components/Services';
 import Skills from './components/Skills';
@@ -65,7 +66,8 @@ function App() {
 
   return (
     <Router>
-      <div className="min-h-screen bg-background-light dark:bg-background-dark font-display text-gray-700 dark:text-gray-300 transition-colors duration-300">
+      <div className="min-h-screen bg-transparent font-display text-gray-700 dark:text-gray-300 transition-colors duration-300">
+        <BackgroundAnimation />
         <Toaster position="top-right" reverseOrder={false} />
         <Header />
         <Suspense fallback={<LoadingFallback />}>

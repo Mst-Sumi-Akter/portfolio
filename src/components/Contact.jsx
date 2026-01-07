@@ -28,7 +28,7 @@ const Contact = () => {
             } else {
                 throw new Error('Failed to send');
             }
-        } catch (error) {
+        } catch {
             toast.error('Something went wrong. Please try again.', { id: loadingToast });
         }
     };
@@ -75,7 +75,7 @@ const Contact = () => {
     }, []);
 
     return (
-        <section id="contact" ref={sectionRef} className="font-display bg-background-light dark:bg-background-dark flex items-center justify-center min-h-screen p-4 sm:p-6 lg:p-8">
+        <section id="contact" ref={sectionRef} className="font-display flex items-center justify-center min-h-screen p-4 sm:p-6 lg:p-8 relative z-10 bg-white/50 dark:bg-slate-900/50 backdrop-blur-sm">
             <div className="relative group w-full max-w-6xl mx-auto">
                 <div className="absolute -inset-2 rounded-xl bg-primary-light/30 blur-2xl transition-all duration-500 group-hover:bg-primary-light/40"></div>
                 <div className="relative w-full bg-white/50 dark:bg-slate-900/50 backdrop-blur-sm shadow-2xl rounded-2xl overflow-hidden ring-1 ring-primary-light/30">

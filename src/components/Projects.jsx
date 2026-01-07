@@ -1,4 +1,4 @@
-import { useEffect, useRef } from 'react';
+import { useRef } from 'react';
 import { motion } from 'framer-motion';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
@@ -24,7 +24,7 @@ const Projects = () => {
     }
 
     return (
-        <section ref={sectionRef} id="projects" className="bg-background-light dark:bg-background-dark font-display text-slate-700 dark:text-slate-300 antialiased">
+        <section ref={sectionRef} id="projects" className="font-display text-slate-700 dark:text-slate-300 antialiased relative z-10 bg-white/50 dark:bg-slate-900/50 backdrop-blur-sm">
             <div className="py-16 sm:py-24">
                 <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
                     <motion.div

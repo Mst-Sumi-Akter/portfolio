@@ -2,10 +2,24 @@
 import React, { useState } from 'react';
 import { NavHashLink as HashLink } from 'react-router-hash-link';
 import { FaHome, FaUser, FaTools, FaBriefcase, FaEnvelope, FaCode, FaDownload } from 'react-icons/fa';
-import image from "../assets/Sumi.png"
+import logoSource from '../assets/logo_source.png';
 
 const Header = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
+    const [isScrolled, setIsScrolled] = useState(false);
+
+    React.useEffect(() => {
+        const handleScroll = () => {
+            if (window.scrollY > 50) {
+                setIsScrolled(true);
+            } else {
+                setIsScrolled(false);
+            }
+        };
+
+        window.addEventListener('scroll', handleScroll);
+        return () => window.removeEventListener('scroll', handleScroll);
+    }, []);
 
     const toggleMenu = () => {
         setIsMenuOpen(!isMenuOpen);
@@ -25,12 +39,20 @@ const Header = () => {
     ];
 
     return (
-        <header className="sticky top-0 z-50 w-full bg-background-light/95 dark:bg-background-dark/95 backdrop-blur-sm shadow-sm transition-colors duration-300">
+        <header className={`sticky top-0 z-50 w-full backdrop-blur-sm shadow-sm transition-all duration-300 ${isScrolled ? 'bg-background-light/95 dark:bg-background-dark/95 shadow-md' : 'bg-transparent shadow-none'}`}>
             <div className="container mx-auto px-4 sm:px-6 lg:px-20 xl:px-24">
                 <div className="flex justify-between items-center py-4">
-                    <HashLink className="flex items-center space-x-3" to="/#hero" onClick={closeMenu}>
-                        <img alt="Sumi Akter profile picture" className="h-10 w-10 rounded-full object-cover" src={image} />
-                        <span className="text-xl font-bold text-gray-900 dark:text-white">Sumi Akter</span>
+                    <HashLink className="flex items-center group" to="/#hero" onClick={closeMenu}>
+                        <div className="relative h-14 w-12 flex items-center justify-center transition-transform duration-300 group-hover:scale-110">
+                            <img
+                                src={logoSource}
+                                alt="S"
+                                className="h-full w-auto object-contain mix-blend-multiply dark:invert dark:mix-blend-screen contrast-[2.5] brightness-90 saturate-[2.5] drop-shadow-[0_0_1px_#003d7a] drop-shadow-[0_0_2px_#003d7a] drop-shadow-[0_0_12px_rgba(0,191,255,0.9)]"
+                            />
+                        </div>
+                        <span className="text-lg font-semibold font-title text-[#003d7a] dark:text-white hidden sm:block -ml-1 mt-2">
+                            UMI AKTER
+                        </span>
                     </HashLink>
 
                     {/* Desktop Menu */}
@@ -48,7 +70,7 @@ const Header = () => {
                         ))}
                         <a
                             className="flex items-center gap-2 text-primary font-medium hover:text-primary/80 transition-colors duration-300"
-                            href="https://drive.google.com/uc?export=download&id=1p1B1sLYe7NF_Kxbx1GlK-330hNYGOQ26"
+                            href="https://drive.google.com/uc?export=download&id=1X4M0vxZmLW8KZiXLuXRDvLyY8vTp8tdl"
                             target="_blank"
                             rel="noopener noreferrer"
                         >
@@ -90,7 +112,7 @@ const Header = () => {
                         ))}
                         <a
                             className="flex items-center gap-3 text-primary font-medium hover:text-primary/80 transition-colors duration-300 block"
-                            href="https://drive.google.com/uc?export=download&id=1p1B1sLYe7NF_Kxbx1GlK-330hNYGOQ26"
+                            href="https://drive.google.com/uc?export=download&id=1X4M0vxZmLW8KZiXLuXRDvLyY8vTp8tdl"
                             target="_blank"
                             rel="noopener noreferrer"
                             onClick={closeMenu}

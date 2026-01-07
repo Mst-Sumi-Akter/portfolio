@@ -1,12 +1,13 @@
 import React, { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { HashLink } from 'react-router-hash-link';
 import { FaFacebookF, FaLinkedinIn, FaGithub, FaWhatsapp } from 'react-icons/fa';
 import { motion } from 'framer-motion';
+import { Typewriter } from 'react-simple-typewriter';
 import image from "../assets/profile-pic (1).png"
 
 gsap.registerPlugin(ScrollTrigger);
-
 const Hero = () => {
     const sectionRef = useRef(null);
 
@@ -40,7 +41,7 @@ const Hero = () => {
                     initial={{ opacity: 0, x: -50 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.6, delay: 0.2 }}
-                    className="hero-name text-4xl md:text-6xl font-bold font-title my-2 text-gray-900 dark:text-white"
+                    className="hero-name text-4xl md:text-6xl font-bold font-title my-2 text-transparent bg-clip-text bg-gradient-to-r from-primary to-purple-600"
                 >
                     SUMI AKTER
                 </motion.h2>
@@ -50,7 +51,17 @@ const Hero = () => {
                     transition={{ duration: 0.6, delay: 0.4 }}
                     className="hero-text-2 text-2xl md:text-3xl font-semibold font-title text-gray-800 dark:text-gray-100"
                 >
-                    And I'm a <span className="text-primary inline-block">Web Developer<span className="inline-block border-r-4 border-primary typing-cursor w-1 h-8 ml-1 align-bottom"></span></span>
+                    And I'm a <span className="text-primary inline-block">
+                        <Typewriter
+                            words={['Full-Stack Developer', 'Front-End Developer', 'React Developer', 'Back-End Developer']}
+                            loop={0}
+                            cursor
+                            cursorStyle='_'
+                            typeSpeed={70}
+                            deleteSpeed={50}
+                            delaySpeed={1000}
+                        />
+                    </span>
                 </motion.h3>
                 <motion.p
                     initial={{ opacity: 0, y: 20 }}
@@ -93,14 +104,15 @@ const Hero = () => {
                     >
                         Download CV
                     </a>
-                    <a
+                    <HashLink
+                        smooth
                         className="inline-block border-2 border-primary text-primary font-semibold px-8 py-3 rounded-lg hover:bg-primary hover:text-white dark:hover:text-background-dark transition-all duration-300 transform hover:-translate-y-1"
-                        href="#about"
+                        to="/#about"
                     >
-                        More About Me
-                    </a>
+                        About Me
+                    </HashLink>
                 </motion.div>
-            </div>
+            </div >
             <div className="lg:w-1/2 mt-12 lg:mt-0 flex justify-center lg:justify-end items-center">
                 <div className="hero-img relative">
                     <div className="absolute inset-0 rounded-full bg-gradient-to-tr from-purple-500 to-cyan-400 blur-3xl opacity-70"></div>
@@ -109,7 +121,7 @@ const Hero = () => {
                     </div>
                 </div>
             </div>
-        </main>
+        </main >
     );
 };
 
