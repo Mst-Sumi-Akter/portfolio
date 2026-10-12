@@ -1,5 +1,7 @@
 import plateshare from "../assets/plateshare.png";
 import contestHub from "../assets/2.JPG";
+import fixoraService from "../assets/fixora-service.jpg";
+import skillSwapPreview from "../assets/skill-swap-preview.png";
 
 export const projectsData = [
     {
@@ -37,37 +39,37 @@ export const projectsData = [
         githubServer: "https://github.com/Mst-Sumi-Akter/ContestHub-server-site"
     },
     {
-        id: "green-circle",
-        title: "Green Circle",
-        description: "A gardening subscription platform with secure payments, real-time slot booking, and full admin dashboard.",
-        image: "https://lh3.googleusercontent.com/aida-public/AB6AXuAUYp5hpUgm-59yyiHKWPSk9bhewPDwhPneNoEF2GxJJ4sHp-MXZQXTbg48xqZzopp-qOhWMt3lj0gY3cpr2aHLGUm1Rj3xmNuLq2ydR_mKbGjvrBzOfb95ZezLGoAMi2o2EVQjiQe5BdVzKKcFBR0xFFSGszYQQ8HLzYkg2YBOE4UtcF5IeSWigPfxgUW52dVviK6AAcoFKTlbtI2EPz0jWl-ZsCW_hLGspbxN4SxrxQoBj96OvcZW4y4hpiVYPq0n3fsgoucppeEL",
-        techStack: ["JavaScript", "React", "Express", "MongoDB", "Node.js"],
+        id: "fixora",
+        title: "Fixora",
+        description: "A premium service marketplace connecting customers with trusted local professionals for electrical, plumbing, cleaning, and other home services.",
+        image: fixoraService,
+        techStack: ["Next.js 16", "React", "Tailwind CSS", "Framer Motion", "Express.js", "MongoDB", "Mongoose"],
         features: [
-            "Subscription-based access to gardening expert services.",
-            "Appointment booking system with real-time availability.",
-            "Secure payment processing via major gateways.",
-            "Dynamic admin panel for content and user management.",
-            "Custom plant care guides and notifications."
+            "Browse, search, and filter home services in one marketplace.",
+            "View detailed service pricing, features, and provider information.",
+            "List new services through a protected submission form.",
+            "Role-based dashboards for admins, providers, and customers.",
+            "Persistent mock authentication with cookie-based sessions."
         ],
-        liveLink: "https://green-circle.example.com",
-        githubClient: "https://github.com/SumiAkter/green-circle-client",
-        githubServer: "https://github.com/SumiAkter/green-circle-server"
+        liveLink: "https://fixora-mu.vercel.app/",
+        githubClient: "https://github.com/Mst-Sumi-Akter/Local-Service-Marketplace-Fixora",
+        githubServer: "https://fixora-api.vercel.app"
     },
     {
-        id: "event-hub",
-        title: "Event Hub",
-        description: "A full-stack MERN app for creating, managing, and joining events—designed to be secure, responsive, and user-friendly for organizers and attendees alike.",
-        image: "https://lh3.googleusercontent.com/aida-public/AB6AXuDq9dnrZ9VypczW_4zm4ZiXsQ4bMIuNkIOot0OYwfIcZWH0GWwIohiF2MnxDSZwsiBYt0739_cwre1KTfJHt2MOgqzBYGayzXWiFwSbuMmAmGiaZgmPu-BUKnJB5U9ItIOZE7zkN2LWlFKPYQV4pOVznnmnpREzQmuHvLVJSHHOnaBrKrzpfXgMaBAPhdhqHnaGYPoSo53THfIT7CA9dlaHM75uB3IT_hXQyV4gz8oCbVkqKU9LHSC8oaZ9iGXjp0AaGkwV9n6Mj2lg",
-        techStack: ["React", "Express", "MongoDB", "JWT", "Node.js"],
+        id: "skill-swap",
+        title: "Skill Swap",
+        description: "An AI-powered marketplace for exchanging courses and expertise without money, with secure peer-to-peer requests and role-based tools.",
+        image: skillSwapPreview,
+        techStack: ["Next.js", "Tailwind CSS", "Framer Motion", "TanStack Query", "MongoDB", "Mongoose", "NextAuth.js"],
         features: [
-            "Interactive event creation and management tools.",
-            "User-driven event discovery with category filters.",
-            "Integrated messaging system for organizers and attendees.",
-            "Scalable media storage for event images.",
-            "Responsive design optimized for all devices."
+            "Browse and filter courses by category and platform.",
+            "Exchange courses and knowledge without monetary transactions.",
+            "Track pending, accepted, and rejected swap requests.",
+            "Admin tools for course moderation and user management.",
+            "Protected role-based access for users and administrators."
         ],
-        liveLink: "https://event-hub.example.com",
-        githubClient: "https://github.com/SumiAkter/event-hub-client",
-        githubServer: "https://github.com/SumiAkter/event-hub-server"
+        liveLink: "https://skill-swap-zagh-git-main-sumi-akters-projects.vercel.app/?_vercel_share=FTa7JZuJG9hTlpQIdUQSle158E7eO4bT",
+        githubClient: "https://github.com/Mst-Sumi-Akter/skill-swap",
+        githubServer: ""
     }
 ];
